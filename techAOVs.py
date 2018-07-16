@@ -351,7 +351,8 @@ def closeWindow(*args):
     from maya import cmds
     cmds.deleteUI('customAOVWindow', window=True)
 
-# run the script
+# to run the script directly from Maya's script editor, uncommnet the line below, copy/paste the whole script into 
+# Maya script editor and execute it
 # createTechAOVGUI()
 
 
