@@ -5,11 +5,11 @@
 # Use:
 #     In script editor, enter the code below and execute. Alternatively, middle-mouse drag and drop the code into shelf
 #     to make it shelf button.
-'''
-from Vray import customAOVs
-reload(customAOVs)
-customAOVs.createTechAOVGUI()
-'''
+
+#from Vray import customAOVs
+#reload(customAOVs)
+#customAOVs.createTechAOVGUI()
+
 ##############################################################################
 
 
