@@ -1,7 +1,7 @@
 ##############################################################################
 # V-Ray Tech AOV (Render Elements) creation GUI for Maya
 # Version: 1.0.0
-# Author: Jason Huang (inspired by Bryanna London (https://bryannalondon.com/custom-render-elements/)
+# inspired by Bryanna London (https://bryannalondon.com/custom-render-elements/) Original idea and code template goes to him.
 # Use:
 #     In script editor, enter the code below and execute. Alternatively, middle-mouse drag and drop the code into shelf
 #     to make it shelf button.
