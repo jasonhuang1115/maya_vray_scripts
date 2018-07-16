@@ -12,7 +12,7 @@
 '''
 ##############################################################################
 
-
+# import maya command and import mel
 import maya.cmds as cmds
 import maya.mel as mel
 
