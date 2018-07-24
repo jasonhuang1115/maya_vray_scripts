@@ -33,6 +33,12 @@ def createAmboccAOV():
     # create a Vray dirt texture
     vRayDirtTex = cmds.shadingNode('VRayDirt', asTexture=True)
 
+    # set the Vray dirt texture 'Subdivs' to be 8
+    cmds.setAttr(vRayDirtTex + '.subdivs', 8)
+
+    # set the Vray dirt texture 'Work with Transparency" on
+    cmds.setAttr(vRayDirtTex + '.workWithTransparency', 1)
+
     # create a place2dTexture node
     place2dTextureNode = cmds.shadingNode('place2dTexture', asUtility=True)
 
@@ -229,7 +235,7 @@ def createWireframeAOV():
     wireframeAOV = cmds.rename(wireframeREinRenderSetting, 'tech_wireframe')
     #print 'explicit name is:', (maya.cmds.getAttr(ao +'.vray_explicit_name_extratex'))
 
-    # set explicit channel name to be 'AO'
+    # set explicit channel name to be 'tech_wireframe'
     cmds.setAttr(wireframeAOV + '.vray_explicit_name_extratex', 'tech_wireframe', type='string')
 
     # set default attribute 'Consider for Anti-Aliasing' off
@@ -238,8 +244,14 @@ def createWireframeAOV():
     # create a vrayEdgesTex node
     vrayEdgesTexNode = cmds.shadingNode('VRayEdges', asTexture=True)
 
+    # change default Width Type from 'Pixels' to 'World units'
+    cmds. setAttr(vrayEdgesTexNode + '.widthType', 0)
+
+    # set default attributes for 'World units'
+    cmds.setAttr(vrayEdgesTexNode + '.worldWidth', .05)
+    
     # set default attributes
-    cmds.setAttr(vrayEdgesTexNode + '.pixelWidth', .1)
+    #cmds.setAttr(vrayEdgesTexNode + '.pixelWidth', .1)
 
     # create a place2dTexture node
     place2dTexNode = cmds.shadingNode('place2dTexture', asUtility=True)
