@@ -1,0 +1,1 @@
+This is a simple Python script still in WIP that will rename all meshes based on its parent group node's name.
